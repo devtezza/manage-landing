@@ -1,0 +1,48 @@
+header{
+    border: 1px solid green;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .manage-logo {
+        border: 1px solid black;
+    }
+    
+    .menu-btn {
+        border: 1px solid red;
+        width: 2rem;
+        height: 1.5rem;        
+        background: url('../images/icon-hamburger.svg') no-repeat center;
+        background-size: contain;
+        display: none;
+        cursor: pointer;
+        padding: 0;        
+        opacity: 0;
+        visibility: hidden;
+        z-index: 5;
+    }
+
+    .nav {
+        /*border: 1px solid red;*/
+        width: 35%;
+
+        .menu-nav {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                text-decoration: none;
+                color: $dark-blue;
+                font-weight: 700;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .cta-btn {
+        /*border: 1px solid black;*/
+        /*width: 10%;*/
+    }
+}
