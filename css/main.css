@@ -8,6 +8,7 @@
 
 /*PRIMARY COLORS*/
 /*NEUTRAL COLORS*/
+/*BREAKING POINTS*/
 header {
   border: 1px solid green;
   height: 10rem;
@@ -37,12 +38,35 @@ header .menu-btn {
   padding: 0;
   opacity: 0;
   visibility: hidden;
-  z-index: 5;
+  z-index: 4;
+}
+
+@media screen and (max-width: 730px) {
+  header .menu-btn {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 header .nav {
-  /*border: 1px solid red;*/
+  border: 1px solid blue;
   width: 35%;
+}
+
+@media screen and (max-width: 1024px) {
+  header .nav {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  header .nav {
+    position: fixed;
+    top: 12rem;
+    left: -50%;
+    z-index: 999;
+  }
 }
 
 header .nav .menu-nav {
@@ -55,6 +79,12 @@ header .nav .menu-nav {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 730px) {
+  header .nav .menu-nav {
+    display: block;
+  }
+}
+
 header .nav .menu-nav a {
   text-decoration: none;
   color: #242d52;
@@ -63,8 +93,14 @@ header .nav .menu-nav a {
 }
 
 header .cta-btn {
-  /*border: 1px solid black;*/
-  /*width: 10%;*/
+  visibility: visible;
+}
+
+@media screen and (max-width: 730px) {
+  header .cta-btn {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 body {
@@ -81,6 +117,18 @@ body {
 header, main, footer {
   width: 80%;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1270px) {
+  header, main, footer {
+    width: 92%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header, main, footer {
+    width: 95%;
+  }
 }
 
 .manage-logo {

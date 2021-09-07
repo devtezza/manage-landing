@@ -20,17 +20,38 @@ header{
         padding: 0;        
         opacity: 0;
         visibility: hidden;
-        z-index: 5;
+        z-index: 4;
+
+        @media screen and (max-width: $small-tablet){
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     .nav {
-        /*border: 1px solid red;*/
+        border: 1px solid blue;
         width: 35%;
+
+        @media screen and (max-width: $full-tablet) {
+            width: 50%
+        }
+
+        @media screen and (max-width: $small-tablet){            
+            position: fixed;             
+            top: 12rem;
+            left: -50%;
+            z-index: 999;
+        }
 
         .menu-nav {
             list-style: none;
             display: flex;
             justify-content: space-between;
+
+            @media screen and (max-width: $small-tablet){            
+                display: block;
+            }
 
             a {
                 text-decoration: none;
@@ -38,11 +59,17 @@ header{
                 font-weight: 700;
                 font-size: 0.8rem;
             }
+
+            
         }
+        
     }
 
     .cta-btn {
-        /*border: 1px solid black;*/
-        /*width: 10%;*/
+        visibility: visible;
+        @media screen and (max-width: $small-tablet){
+            display: none;            
+            visibility: hidden;
+        }
     }
 }
