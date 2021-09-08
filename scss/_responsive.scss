@@ -1,0 +1,72 @@
+@include media-lg{
+    header, main, footer {
+        width: 90%;
+        
+    }
+}
+
+@include media-md {
+    .top-bar {
+        
+        .menu-btn {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+
+            &.active {
+                background: url('../images/icon-close.svg') no-repeat center;
+                background-size: contain;
+            }
+        }
+
+        .nav {
+            position: fixed;             
+            top: 12rem;
+            left: -50%;
+            z-index: 999;
+            display: none;
+
+            &.active {
+                left: 2.5%;
+                right: 2.5%;
+                width: 95%;
+            }
+        }
+
+        .cta-btn {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}
+
+@include media-sm {
+    .header-container {               
+        background-position: right -150px top -100px;    
+        background-size: max(120%);
+        background-attachment: fixed;
+    }
+
+    .top-bar {
+        padding: 1rem 0;
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+        
+        div {
+            width: 100%;
+
+            &:nth-child(2) {
+                order: -1;
+            }
+        }
+    
+        img {
+            max-width: 100%;
+        }
+    }
+}
+

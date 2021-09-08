@@ -1,6 +1,7 @@
 @import './config';
 @import './variables';
 @import './header';
+@import 'responsive';
 
 body {
     border: 1px solid red;
@@ -10,24 +11,9 @@ body {
     padding: 0;
     font-family: 'Be Vietnam', sans-serif;
     font-size: 16px;
-    background: url('../images/bg-tablet-pattern.svg') no-repeat 125% -10rem;
-}
-
-header, main, footer {
-    width: 80%;
-    margin: 0 auto; 
     
-    @media screen and(max-width: $mid-destktop) {
-        width: 92%;
-    }
     
-    @media screen and(max-width: $mid-tablet) {
-        width: 95%;
-    }
 }
-
-
-
 
 .manage-logo {    
     width: 10rem;
@@ -53,6 +39,12 @@ header, main, footer {
         
         
     }
+}
+
+
+
+footer {
+    border: 1px solid yellow;
 }
 
 .attribution { font-size: 11px; text-align: center; }

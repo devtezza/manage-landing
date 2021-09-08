@@ -1,13 +1,18 @@
-header{
+header {
     border: 1px solid green;
-    height: 10rem;
+}
+
+.top-bar{
+    /*border: 1px solid green;*/
+    /*height: 10rem;*/
+    padding: 2.5rem 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;    
 
-    .manage-logo {
+    /*.manage-logo {
         border: 1px solid black;
-    }
+    }*/
     
     .menu-btn {
         border: 1px solid red;
@@ -20,58 +25,33 @@ header{
         padding: 0;        
         opacity: 0;
         visibility: hidden;
-        z-index: 4;
-
-        @media screen and (max-width: $small-tablet){
-            display: block;
-            opacity: 1;
-            visibility: visible;
-
-            &.active {
-                background: url('../images/icon-close.svg') no-repeat center;
-                background-size: contain;
-            }
-        }
+        z-index: 4;        
     }
 
     .nav {
-        border: 1px solid blue;
-        width: 35%;
+        /*border: 1px solid blue;        */
+        /*width: 50%;*/
+       
 
-        @media screen and (max-width: $full-tablet) {
-            width: 50%
-        }
-
-        @media screen and (max-width: $small-tablet){            
-            position: fixed;             
-            top: 12rem;
-            left: -50%;
-            z-index: 999;
-
-            &.active {
-                left: 2.5%;
-                right: 2.5%;
-                width: 95%;
-            }
-        }
+        /*@media screen and (max-width: $small-tablet){*/            
+            
+       /* }*/
 
         .menu-nav {
             list-style: none;
-            display: flex;
-            justify-content: space-between;
+            
+            li {
+                display: inline-block;
+                padding: 0 1rem;          
 
-            @media screen and (max-width: $small-tablet){            
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
+                a {
+                    text-decoration: none;
+                    color: $dark-blue;
+                    font-weight: 700;
+                    font-size: 0.8rem;
+                }
             }
-
-            a {
-                text-decoration: none;
-                color: $dark-blue;
-                font-weight: 700;
-                font-size: 0.8rem;
-            }
+            
 
             
         }
@@ -79,10 +59,19 @@ header{
     }
 
     .cta-btn {
-        visibility: visible;
-        @media screen and (max-width: $small-tablet){
-            display: none;            
-            visibility: hidden;
-        }
+        visibility: visible;       
+    }
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    
+    div {
+        width: 50%;
+    }
+
+    img {
+        max-width: 100%;
     }
 }
