@@ -26,6 +26,11 @@ header{
             display: block;
             opacity: 1;
             visibility: visible;
+
+            &.active {
+                background: url('../images/icon-close.svg') no-repeat center;
+                background-size: contain;
+            }
         }
     }
 
@@ -42,6 +47,12 @@ header{
             top: 12rem;
             left: -50%;
             z-index: 999;
+
+            &.active {
+                left: 2.5%;
+                right: 2.5%;
+                width: 95%;
+            }
         }
 
         .menu-nav {
@@ -50,7 +61,9 @@ header{
             justify-content: space-between;
 
             @media screen and (max-width: $small-tablet){            
-                display: block;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
 
             a {

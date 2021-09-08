@@ -47,6 +47,10 @@ header .menu-btn {
     opacity: 1;
     visibility: visible;
   }
+  header .menu-btn.active {
+    background: url("../images/icon-close.svg") no-repeat center;
+    background-size: contain;
+  }
 }
 
 header .nav {
@@ -67,6 +71,11 @@ header .nav {
     left: -50%;
     z-index: 999;
   }
+  header .nav.active {
+    left: 2.5%;
+    right: 2.5%;
+    width: 95%;
+  }
 }
 
 header .nav .menu-nav {
@@ -81,7 +90,16 @@ header .nav .menu-nav {
 
 @media screen and (max-width: 730px) {
   header .nav .menu-nav {
-    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
