@@ -6,9 +6,26 @@
   padding: 0;
 }
 
+body {
+  border: 1px solid red;
+  max-width: 1440px;
+  min-width: 250px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Be Vietnam', sans-serif;
+  font-size: 16px;
+}
+
+/*PRIMARY COLORS*/
+/*NEUTRAL COLORS*/
 header, main, footer {
   width: 80%;
   margin: 0 auto;
+}
+
+h2, h3 {
+  font-size: 3.5rem;
+  color: #242d52;
 }
 
 .header-container {
@@ -24,8 +41,44 @@ header, main, footer {
     }*/
 }
 
-/*PRIMARY COLORS*/
-/*NEUTRAL COLORS*/
+.manage-logo {
+  width: 10rem;
+}
+
+.manage-logo img {
+  max-width: 100%;
+}
+
+.cta-btn {
+  width: 10rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 3;
+}
+
+.cta-btn a {
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  color: #fafafa;
+  background: #f25f3a;
+  -webkit-box-shadow: 0px 5px 10px 0.5px rgba(242, 95, 58, 0.5);
+          box-shadow: 0px 5px 10px 0.5px rgba(242, 95, 58, 0.5);
+}
+
+footer {
+  border: 1px solid yellow;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
 header {
   border: 1px solid green;
 }
@@ -113,6 +166,11 @@ header {
 }
 
 @media screen and (max-width: 968px) {
+  .header-container {
+    background-position: right -150px top -100px;
+    background-size: 70%;
+    /*background-attachment: scroll;*/
+  }
   .top-bar .menu-btn {
     display: block;
     opacity: 1;
@@ -138,18 +196,8 @@ header {
     display: none;
     visibility: hidden;
   }
-}
-
-@media screen and (max-width: 375px) {
-  .header-container {
-    background-position: right -150px top -100px;
-    background-size: 120%;
-    background-attachment: fixed;
-  }
-  .top-bar {
-    padding: 1rem 0;
-  }
   .hero-section {
+    border: 1px dotted pink;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -164,61 +212,31 @@ header {
   .hero-section div {
     width: 100%;
   }
-  .hero-section div:nth-child(2) {
+  .hero-section div.hero-section-img {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+    border: 1px solid black;
   }
-  .hero-section img {
-    max-width: 100%;
+  .hero-section div.hero-section-img img {
+    border: 1px solid red;
+    width: 150%;
+  }
+  .hero-section div.hero-section-txt h2 {
+    line-height: 1.25;
+    font-size: 2.5rem;
+    text-align: center;
   }
 }
 
-body {
-  border: 1px solid red;
-  max-width: 1440px;
-  min-width: 250px;
-  margin: 0 auto;
-  padding: 0;
-  font-family: 'Be Vietnam', sans-serif;
-  font-size: 16px;
-}
-
-.manage-logo {
-  width: 10rem;
-}
-
-.manage-logo img {
-  max-width: 100%;
-}
-
-.cta-btn {
-  width: 10rem;
-  font-weight: 700;
-  font-size: 0.8rem;
-  line-height: 3;
-}
-
-.cta-btn a {
-  text-decoration: none;
-  padding: 0.8rem 2rem;
-  border-radius: 2rem;
-  color: #fafafa;
-  background: #f25f3a;
-  -webkit-box-shadow: 0px 5px 10px 0.5px rgba(242, 95, 58, 0.5);
-          box-shadow: 0px 5px 10px 0.5px rgba(242, 95, 58, 0.5);
-}
-
-footer {
-  border: 1px solid yellow;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: #3e52a3;
+@media screen and (max-width: 375px) {
+  .header-container {
+    background-position: right -150px top -100px;
+    background-size: 120%;
+    /*background-attachment: fixed;*/
+  }
+  .top-bar {
+    padding: 1rem 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
