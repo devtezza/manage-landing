@@ -181,16 +181,50 @@ header {
     background-size: contain;
   }
   .top-bar .nav {
+    /*border: 1px solid purple;*/
     position: fixed;
-    top: 12rem;
+    top: 6rem;
     left: -50%;
     z-index: 999;
     display: none;
+    visibility: hidden;
+    opacity: 0;
   }
   .top-bar .nav.active {
-    left: 2.5%;
-    right: 2.5%;
-    width: 95%;
+    display: block;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 18rem;
+    visibility: visible;
+    opacity: 1;
+    background: #fafafa;
+    border-radius: 5px;
+  }
+  .top-bar .nav .menu-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    width: 100%;
+    height: 18rem;
+  }
+  .top-bar .nav .menu-nav li {
+    /*border: 1px dashed black;*/
+    padding: 0;
+  }
+  .top-bar .nav .menu-nav li a {
+    font-size: 1rem;
   }
   .top-bar .cta-btn {
     display: none;

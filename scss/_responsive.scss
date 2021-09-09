@@ -26,16 +26,46 @@
         }
 
         .nav {
+            /*border: 1px solid purple;*/
             position: fixed;             
-            top: 12rem;
+            top: 6rem;
             left: -50%;
             z-index: 999;
             display: none;
+            visibility: hidden;
+            opacity: 0;            
 
             &.active {
-                left: 2.5%;
-                right: 2.5%;
-                width: 95%;
+                display: block;
+                left: 5%;
+                right: 5%;
+                width: 90%;
+                height: 18rem;                
+                visibility: visible;
+                opacity: 1;
+                background: $very-light-gray;
+                border-radius: 5px;
+            }
+
+            .menu-nav{
+                display: flex;                
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 0;
+                width: 100%;
+                height: 18rem;
+
+                li {
+                   
+                    /*border: 1px dashed black;*/
+                    padding: 0;
+
+                    a {
+                        font-size: 1rem;
+                    }
+                    
+                }
             }
         }
 
