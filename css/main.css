@@ -7,7 +7,7 @@
 }
 
 body {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   max-width: 1440px;
   min-width: 250px;
   margin: 0 auto;
@@ -29,7 +29,7 @@ h2, h3 {
 }
 
 .header-container {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   width: 100%;
   /*height: 90vh;    */
   background: url("../images/bg-tablet-pattern.svg") no-repeat 128% -11rem;
@@ -58,7 +58,7 @@ h2, h3 {
 
 .cta-btn a {
   text-decoration: none;
-  padding: 0.8rem 2rem;
+  padding: 1em 2.1rem;
   border-radius: 2rem;
   color: #fafafa;
   background: #f25f3a;
@@ -67,7 +67,7 @@ h2, h3 {
 }
 
 footer {
-  border: 1px solid yellow;
+  /*border: 1px solid yellow;*/
 }
 
 .attribution {
@@ -80,7 +80,14 @@ footer {
 }
 
 header {
-  border: 1px solid green;
+  /*border: 1px solid green;*/
+}
+
+header p {
+  padding: 2.5rem 0;
+  color: #9095a7;
+  line-height: 1.6;
+  width: 22rem;
 }
 
 .top-bar {
@@ -102,7 +109,7 @@ header {
 }
 
 .top-bar .menu-btn {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   width: 2rem;
   height: 1.5rem;
   background: url("../images/icon-hamburger.svg") no-repeat center;
@@ -143,6 +150,7 @@ header {
 }
 
 .hero-section {
+  padding-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,7 +239,8 @@ header {
     visibility: hidden;
   }
   .hero-section {
-    border: 1px dotted pink;
+    /*border: 2px solid pink;*/
+    padding-top: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -245,20 +254,33 @@ header {
   }
   .hero-section div {
     width: 100%;
+    /*border: 1px solid black;*/
   }
   .hero-section div.hero-section-img {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
   }
   .hero-section div.hero-section-img img {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     width: 150%;
   }
   .hero-section div.hero-section-txt h2 {
     line-height: 1.25;
     font-size: 2.5rem;
+    text-align: center;
+  }
+  .hero-section div.hero-section-txt p {
+    /*border: 1px solid red;*/
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+    text-align: center;
+    line-height: 1.8;
+  }
+  .hero-section div.hero-section-txt .cta-btn {
+    margin-top: 1.5rem;
     text-align: center;
   }
 }
@@ -271,6 +293,10 @@ header {
   }
   .top-bar {
     padding: 1rem 0;
+  }
+  .hero-section-txt p {
+    /*border: 1px solid green;*/
+    margin: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
