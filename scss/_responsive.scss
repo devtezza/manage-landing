@@ -3,12 +3,25 @@
         width: 90%;
         
     }
+
+    .header-container {
+        background-position: calc(100% + 250px) calc(100% - 80px);
+        background-size: max(65%);
+    }
+}
+
+@include media-lg-to-md {
+    .header-container {               
+        background-position: right -250px top -150px;    
+        background-size: max(68%);
+        /*background-attachment: scroll;*/
+    }
 }
 
 @include media-md {
     .header-container {               
-        background-position: right -150px top -100px;    
-        background-size: max(70%);
+        background-position: right -280px top -220px;
+        background-size: max(115%);
         /*background-attachment: scroll;*/
     }
 
@@ -88,10 +101,11 @@
 
             &.hero-section-img {
                 order: -1;
+                text-align: center;
                 /*border: 1px solid black;*/
                     img{
                         /*border: 1px solid red;*/
-                        width: 150%;
+                        max-width: 100%;
                     }
             }
 
@@ -125,7 +139,7 @@
     .header-container {               
         background-position: right -150px top -100px;    
         background-size: max(120%);
-        /*background-attachment: fixed;*/
+        
     }
 
     .top-bar {

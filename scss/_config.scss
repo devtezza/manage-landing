@@ -7,7 +7,7 @@
 }
 
 body {
-    /*border: 1px solid red;*/
+    border: 1px solid red;
     max-width: 1440px;
     min-width: 250px;
     margin: 0 auto;        
@@ -30,8 +30,14 @@ body {
     }
 }
 
+@mixin media-lg-to-md {
+    @media screen and (max-width: 1120px) {
+        @content;
+    }
+}
+
 @mixin media-lg {
-    @media screen and (max-width: 1140px) {
+    @media screen and (max-width: 1240px) {
         @content;
     }
 } 

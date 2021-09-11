@@ -7,7 +7,7 @@
 }
 
 body {
-  /*border: 1px solid red;*/
+  border: 1px solid red;
   max-width: 1440px;
   min-width: 250px;
   margin: 0 auto;
@@ -29,16 +29,11 @@ h2, h3 {
 }
 
 .header-container {
-  /*border: 1px solid black;*/
   width: 100%;
-  /*height: 90vh;    */
-  background: url("../images/bg-tablet-pattern.svg") no-repeat 128% -11rem;
+  background: url("../images/bg-tablet-pattern.svg") no-repeat;
+  /*background-position: 128% -11rem;    */
+  background-position: calc(100% + 170px) calc(100% - 80px);
   background-size: 58%;
-  /*background-attachment: fixed;    */
-  /*@media screen and(max-width: $small-tablet) {
-        background-position: 110% -2rem;
-        
-    }*/
 }
 
 .manage-logo {
@@ -66,10 +61,9 @@ h2, h3 {
           box-shadow: 0px 5px 10px 0.5px rgba(242, 95, 58, 0.5);
 }
 
-footer {
-  /*border: 1px solid yellow;*/
-}
-
+/*footer {
+    border: 1px solid yellow;
+}*/
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -157,6 +151,23 @@ header p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /*.hero-section-img{
+        position: relative;
+    }
+
+    .hero-section-img:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -100px;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: blue;        
+        background: url('../images/bg-tablet-pattern.svg') no-repeat left bottom;    
+        background-size: max(100%);
+        
+    }*/
 }
 
 .hero-section div {
@@ -165,18 +176,31 @@ header p {
 
 .hero-section img {
   max-width: 100%;
+  /*border: 1px solid black;*/
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1240px) {
   header, main, footer {
     width: 90%;
+  }
+  .header-container {
+    background-position: calc(100% + 250px) calc(100% - 80px);
+    background-size: 65%;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .header-container {
+    background-position: right -250px top -150px;
+    background-size: 68%;
+    /*background-attachment: scroll;*/
   }
 }
 
 @media screen and (max-width: 968px) {
   .header-container {
-    background-position: right -150px top -100px;
-    background-size: 70%;
+    background-position: right -280px top -220px;
+    background-size: 115%;
     /*background-attachment: scroll;*/
   }
   .top-bar .menu-btn {
@@ -260,11 +284,12 @@ header p {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+    text-align: center;
     /*border: 1px solid black;*/
   }
   .hero-section div.hero-section-img img {
     /*border: 1px solid red;*/
-    width: 150%;
+    max-width: 100%;
   }
   .hero-section div.hero-section-txt h2 {
     line-height: 1.25;
@@ -289,7 +314,6 @@ header p {
   .header-container {
     background-position: right -150px top -100px;
     background-size: 120%;
-    /*background-attachment: fixed;*/
   }
   .top-bar {
     padding: 1rem 0;
