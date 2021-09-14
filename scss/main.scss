@@ -3,3 +3,46 @@
 @import 'components';
 @import 'header';
 @import 'responsive';
+
+main {
+    section {
+        margin-top: 7rem;
+    }
+}
+
+.features {
+    display: flex;
+
+    & > div {
+        width: 50%;
+        /*border: 1px solid black;        */
+    }
+
+    .question {
+        p {
+            margin-top: 2rem;
+            width: 70%;
+        }
+    }
+
+    ol {
+        list-style: none;
+
+        span {
+            display: inline-block;
+            width: 4rem;            
+            text-align: center;
+            background: $bright-red;
+            color: $very-light-gray;
+            padding: 0.5rem 0;
+            border-radius: 2rem;
+            margin-right: 2rem;
+        }
+
+       
+        p {
+            margin-left: 6rem;
+            margin-top: 1rem;
+        }
+    }
+}

@@ -5,8 +5,16 @@ header, main, footer {
 }
 
 h2, h3 {
-    font-size: 3.5rem;
+    /*font-size: 3.5rem;*/
     color: $dark-blue;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2.5rem;
 }
 
 .header-container {
@@ -42,8 +50,6 @@ h2, h3 {
         
     }
 }
-
-
 
 /*footer {
     border: 1px solid yellow;
