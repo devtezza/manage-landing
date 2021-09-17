@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700;800&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -380,18 +380,18 @@ main section {
     margin-top: 1.5rem;
     text-align: center;
   }
+  .question p {
+    margin: 1rem auto 0 auto;
+    width: 60%;
+    text-align: center;
+  }
   .features {
     display: block;
-    border: 2px dashed blue;
   }
   .features > div {
     width: 80%;
     margin: 0 auto;
     /*border: 1px solid black;        */
-  }
-  .features .question p {
-    margin: 1rem auto 0 auto;
-    width: 60%;
   }
   .features .features-list {
     margin-top: 2rem;
@@ -408,12 +408,28 @@ main section {
     background: #ffefeb;
     z-index: -2;
   }
+  .features ol span {
+    width: 6rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
   .features h4 {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 375px) {
+  /*html, body {
+        width: 100%;
+    }*/
+  body {
+    width: 100%;
+    margin: 0;
+  }
+  main {
+    width: 100%;
+    margin: 0;
+  }
   .header-container {
     background-position: right -150px top -100px;
     background-size: 120%;
@@ -425,11 +441,37 @@ main section {
     /*border: 1px solid green;*/
     margin: 0;
   }
+  .features {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  .features h3 {
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+  }
   .features > div {
     width: 100%;
   }
-  span {
-    margin-left: 1rem;
+  .features p {
+    line-height: 2;
+  }
+  .features .question p {
+    width: 80%;
+    margin: 2rem auto 3rem auto;
+    text-align: center;
+  }
+  .features ol p {
+    width: 100%;
+    text-align: left;
+    margin-left: 0.5rem;
+  }
+  h4 {
+    font-weight: 800;
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -134,9 +134,17 @@
         } 
     }
 
+    .question {
+        p {
+            margin: 1rem auto 0 auto;
+            width: 60%;
+            text-align: center;
+        }
+    }
+
     .features {
         display: block;
-        border: 2px dashed blue;
+        //border: 2px dashed blue;
 
         & > div {
             width: 80%;
@@ -144,12 +152,7 @@
             /*border: 1px solid black;        */
         }
 
-        .question {
-            p {
-                margin: 1rem auto 0 auto;
-                width: 60%;
-            }
-        }
+        
 
         .features-list {
             margin-top: 2rem;
@@ -168,7 +171,13 @@
             left: 2rem;            
             background: $very-pale-red; 
             z-index: -2;           
-        }        
+        }    
+        
+        ol span {
+            width: 6rem;
+            margin-right: 1rem;
+            margin-left: 1rem;            
+        }
         
         h4 {
             //border: 3px solid purple;
@@ -177,7 +186,19 @@
     }
 }
 
-@include media-sm {
+@include media-sm {    
+    /*html, body {
+        width: 100%;
+    }*/
+    body {
+        width: 100%;
+        margin: 0;
+    }
+    main {
+        width: 100%;
+        margin: 0;
+    }
+
     .header-container {               
         background-position: right -150px top -100px;    
         background-size: max(120%);
@@ -197,13 +218,61 @@
        
    }
    .features {
+        font-size: 0.9rem;
+        width: 100%;      
+
+        h3 {
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            font-size: 2rem;
+            font-weight: 800;
+            text-align: center;
+        }
+
         & > div {
             width: 100%;
-        }            
+            //border: 1px dotted blue;            
+        } 
+
+        p {
+            line-height: 2;
+        }
+
+        .question {
+            //border: 1px solid green;
+        
+                p {
+                    //border: 1px solid red;
+                    width: 80%;
+                    margin: 2rem auto 3rem auto;
+                    text-align: center;
+                }
+            }
+            
+        ol {        
+
+            p {
+                //border: 1px solid yellow;
+                width: 100%;
+                text-align: left;
+                margin-left: 0.5rem;
+            }
+        } 
+   }
+  
+   h4 {
+       font-weight: 800;
+       font-size: 1rem;
    }
 
-   span {
-       margin-left: 1rem;
-   }
+   
+
+//    .title-wrapper {       
+//        border: 1px solid black;
+//        margin-left: 1rem;
+//    }
+
+   
 }
 
