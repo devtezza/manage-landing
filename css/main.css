@@ -54,6 +54,7 @@ h3 {
 
 .cta-btn {
   width: 10rem;
+  max-width: 50%;
   font-weight: 700;
   font-size: 0.8rem;
   line-height: 3;
@@ -270,11 +271,10 @@ main section {
 }
 
 @media screen and (max-width: 968px) {
-  .header-container {
-    background-position: right -280px top -220px;
-    background-size: 115%;
-    /*background-attachment: scroll;*/
-  }
+  /*.header-container {               
+        background-position: right -380px top -250px;
+        background-size: max(100%);        
+    }*/
   .top-bar .menu-btn {
     display: block;
     opacity: 1;
@@ -296,9 +296,9 @@ main section {
   }
   .top-bar .nav.active {
     display: block;
-    left: 5%;
-    right: 5%;
-    width: 90%;
+    left: 10%;
+    overflow-y: hidden;
+    width: 80%;
     height: 18rem;
     visibility: visible;
     opacity: 1;
@@ -336,49 +336,27 @@ main section {
   }
   .hero-section {
     /*border: 2px solid pink;*/
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     padding-top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
-  .hero-section div {
-    width: 100%;
-    /*border: 1px solid black;*/
+  .hero-section-txt h2 {
+    font-size: 1.8rem;
   }
-  .hero-section div.hero-section-img {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-    text-align: center;
-    /*border: 1px solid black;*/
-  }
-  .hero-section div.hero-section-img img {
-    /*border: 1px solid red;*/
+  .hero-section-txt p {
     max-width: 100%;
   }
-  .hero-section div.hero-section-txt h2 {
-    line-height: 1.25;
-    font-size: 2.5rem;
-    text-align: center;
+  .hero-section-txt .cta-btn {
+    display: inline;
   }
-  .hero-section div.hero-section-txt p {
+  .hero-section-img {
+    text-align: center;
+    /*border: 1px solid black;*/
+  }
+  .hero-section-img img {
     /*border: 1px solid red;*/
-    width: 90%;
-    margin: 0 auto;
-    padding: 0.5rem 0;
-    text-align: center;
-    line-height: 1.8;
-  }
-  .hero-section div.hero-section-txt .cta-btn {
-    margin-top: 1.5rem;
-    text-align: center;
+    max-width: 100%;
   }
   .question p {
     margin: 1rem auto 0 auto;
@@ -398,8 +376,11 @@ main section {
   }
   .features .title-wrapper {
     position: relative;
+    overflow: hidden;
   }
   .features .title-wrapper:before {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     content: '';
     position: absolute;
     width: 100%;
@@ -419,9 +400,6 @@ main section {
 }
 
 @media screen and (max-width: 375px) {
-  /*html, body {
-        width: 100%;
-    }*/
   body {
     width: 100%;
     margin: 0;
@@ -437,9 +415,43 @@ main section {
   .top-bar {
     padding: 1rem 0;
   }
+  .hero-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero-section > div {
+    width: 100%;
+  }
+  .hero-section-img {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .hero-section-txt h2 {
+    line-height: 1.25;
+    font-size: 2.5rem;
+    text-align: center;
+  }
   .hero-section-txt p {
-    /*border: 1px solid green;*/
-    margin: 0;
+    /*border: 1px solid red;*/
+    width: 90%;
+    margin: 1rem auto;
+    padding: 0.5rem 0;
+    text-align: left;
+    line-height: 1.8;
+  }
+  .hero-section-txt .cta-btn {
+    margin-top: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
   }
   .features {
     font-size: 0.9rem;
