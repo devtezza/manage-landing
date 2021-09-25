@@ -34,6 +34,20 @@ header {
         z-index: 4;        
     }
 
+    .overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        //background: hsla(0, 0, 0, 0.3);
+        background-image: linear-gradient(hsla(0,0%,0%,0.05), hsla(0,0%,0%,0.3));
+        transition: all 0.35s ease;
+     }
+
     .nav {
         /*border: 1px solid blue;        */
         /*width: 50%;*/
@@ -83,6 +97,7 @@ header {
         /*border: 1px solid black;*/
     }   
 
+    
     /*.hero-section-img{
         position: relative;
     }

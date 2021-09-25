@@ -12,12 +12,20 @@
         <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
             
         <title>Frontend Mentor | Manage landing page</title>
+        <!-- Required Core Stylesheet -->
+        <link rel="stylesheet" href="css/glide.core.css">
+
+        <!-- Optional Theme Stylesheet -->
+        <link rel="stylesheet" href="css/glide.theme.css">
 
         <!--Normalize CSS-->
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         
         <!--Custom Stylesheet--> 
         <link rel="stylesheet" href="css/main.css">
+
+        
+
     </head>
     <body>
         <div class="header-container">
@@ -28,9 +36,8 @@
                             <img src="/images/logo.svg" alt="manage logo">
                         </h1>
                     </div>
-                    <div class="menu-btn">
-                        
-                    </div>
+                    <div class="menu-btn"></div>
+                    <div class="overlay"></div>
                     <nav class="nav">
                         <ul class="menu-nav">
                             <li>
@@ -110,7 +117,76 @@
                            </ol>
                        </div>
                    </div>
-               </section>              
+               </section>
+               <section class="testimonials">
+                   <h3>What they've said</h3>
+
+                    <div class="glide">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide">
+                                    <div class="card c1">
+                                        <div class="card-image"></div>
+                                        <!--<img src="images/avatar-anisha.png" alt="Anisha Li">-->
+                                        <div class="card-text">
+                                            <h4>Anisha Li</h4>
+                                            <p>“Manage has supercharged our team’s workflow. The ability to maintain
+                                                visibility on larger milestones at all times keeps everyone motivated.”</p>
+                                        </div>                                    
+                                    </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="card c2">
+                                        <div class="card-image"></div>
+                                        <!--<img src="images/avatar-ali.png" alt="Ali Bravo">-->
+                                        <div class="card-text">
+                                            <h4>Ali Bravo</h4>
+                                            <p>“We have been able to cancel so many other subscriptions since using 
+                                                Manage. There is no more cross-channel confusion and everyone is much 
+                                                more focused.”</p>
+                                        </div>                                   
+                                </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="card c3">
+                                        <div class="card-image"></div>
+                                        <!--<img src="images/avatar-richard.png" alt="Richard Watts">-->
+                                        <div class="card-text">
+                                            <h4>Richard Watts</h4>
+                                            <p>“Manage allows us to provide structure and process. It keeps us organized 
+                                                and focused. I can’t stop recommending them to everyone I talk to!”</p>
+                                        </div>                                    
+                                    </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="card c4">
+                                        <div class="card-image"></div>
+                                        <!--<img src="images/avatar-shanai.png" alt="Shanai Gough">-->
+                                        <div class="card-text">
+                                            <h4>Shanai Gough</h4>
+                                            <p>“Their software allows us to track, manage and collaborate on our projects 
+                                                from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+                                        </div>                                    
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="glide__bullets" data-glide-el="controls[nav]">
+                            <button class="glide__bullet" data-glide-dir="=0"></button>
+                            <button class="glide__bullet" data-glide-dir="=1"></button>
+                            <button class="glide__bullet" data-glide-dir="=2"></button>
+                            <button class="glide__bullet" data-glide-dir="=3"></button>
+                        </div>   
+                    </div>                                 
+                   
+               </section> 
+               <section class="test">
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, distinctio culpa. Reiciendis dolores praesentium, dolor ipsa numquam quis tenetur debitis eligendi quasi quia? Vel omnis odio ullam maiores ut. Alias!
+                        </p>
+                    </div>
+               </section>             
             </main>
             <footer>
                 <div class="attribution">
@@ -124,7 +200,8 @@
                     </a>
                 </div>
             </footer>
-       
+    
+    <script src="js/glide.min.js"></script>
     <script src="js/app.js"></script>
     </body>
 </html>

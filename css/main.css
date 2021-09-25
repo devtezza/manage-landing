@@ -125,6 +125,21 @@ header p {
   z-index: 4;
 }
 
+.top-bar .overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.3)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.3));
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
 .top-bar .nav {
   /*border: 1px solid blue;        */
   /*width: 50%;*/
@@ -252,6 +267,88 @@ main section {
   width: 75%;
 }
 
+.testimonials {
+  text-align: center;
+}
+
+.glide {
+  margin-top: 20px;
+  /* width: 100%; */
+}
+
+.card {
+  background: #fafafa;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 5rem;
+}
+
+.background-config, .c1 .card-image::before, .c2 .card-image::before, .c3 .card-image::before, .c4 .card-image::before {
+  content: '';
+  position: absolute;
+  width: 10rem;
+  height: 5rem;
+  top: -2.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.c1 .card-image::before {
+  background-image: url("../images/avatar-anisha.png");
+}
+
+.c2 .card-image::before {
+  background-image: url("../images/avatar-ali.png");
+}
+
+.c3 .card-image::before {
+  background-image: url("../images/avatar-richard.png");
+}
+
+.c4 .card-image::before {
+  background-image: url("../images/avatar-shanai.png");
+}
+
+h4 {
+  color: #242d52;
+}
+
+p {
+  color: #9095a7;
+  line-height: 1.6;
+}
+
+.glide__bullets {
+  bottom: -2em;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.glide__bullet {
+  background-color: #fff;
+  border: 1px solid #f25f3a;
+}
+
+.glide__bullet:focus {
+  outline: none;
+  border: none;
+}
+
+.glide__bullet:hover, .glide__bullet:focus, .glide__bullet--active {
+  /* border: 2px solid white; */
+  background-color: #f25f3a;
+}
+
 @media screen and (max-width: 1240px) {
   header, main, footer {
     width: 90%;
@@ -283,6 +380,11 @@ main section {
   .top-bar .menu-btn.active {
     background: url("../images/icon-close.svg") no-repeat center;
     background-size: contain;
+  }
+  .top-bar .overlay.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
   }
   .top-bar .nav {
     /*border: 1px solid purple;*/
@@ -397,6 +499,11 @@ main section {
   .features h4 {
     width: 100%;
   }
+  .glide__bullets {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -435,13 +542,15 @@ main section {
         -ms-flex-order: -1;
             order: -1;
   }
+  .hero-section-txt {
+    text-align: center;
+  }
   .hero-section-txt h2 {
     line-height: 1.25;
     font-size: 2.5rem;
     text-align: center;
   }
   .hero-section-txt p {
-    /*border: 1px solid red;*/
     width: 90%;
     margin: 1rem auto;
     padding: 0.5rem 0;
@@ -451,7 +560,6 @@ main section {
   .hero-section-txt .cta-btn {
     margin-top: 1.5rem;
     text-align: center;
-    margin: 0 auto;
   }
   .features {
     font-size: 0.9rem;

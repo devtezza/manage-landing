@@ -1,20 +1,20 @@
 const menuBtn = document.querySelector('.menu-btn')
 const navBar = document.querySelector('.nav')
-//const outsideMenu = document.querySelector('.outside-menu')
+const menuOverlay = document.querySelector('.overlay')
 
 
 // Open and Close navbarMenu by clik on menuBtn
 menuBtn.addEventListener('click', toggleMenu)
 // Open and Close navbarMenu by Click Outside
-//outsideMenu.addEventListener('click', toggleMenu)
+menuOverlay.addEventListener('click', toggleMenu)
 
 // Toggle Menu Function
 function toggleMenu() {
-    //console.log('activated toggleMenu function')
+    console.log(menuOverlay)
     navBar.classList.toggle('active')
     menuBtn.classList.toggle('active')
-    console.log(navBar.classList)
-    //outsideMenu.classList.toggle('active')
+    //console.log(navBar.classList)
+    menuOverlay.classList.toggle('active')
     document.body.classList.toggle('scrolling')
     
 }
@@ -33,3 +33,23 @@ window.addEventListener('resize', () => {
       resizeScreen()
    }
 })
+
+// Configuring Glide JS - Carousel Slider
+const config = {
+    type: 'carousel',
+    perView: 3,
+    gap: 20, 
+     
+    breakpoints: {
+        
+        980: {
+          perView: 1,
+          activeNav: 'glide__bullet--active'
+        },
+        
+      }
+    
+}
+
+// Creating Carousel Slider
+new Glide('.glide', config).mount()

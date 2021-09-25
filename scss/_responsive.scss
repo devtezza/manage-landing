@@ -37,6 +37,14 @@
             }
         }
 
+        .overlay {
+            &.active {
+               display: block;
+               opacity: 1;
+               visibility: visible;
+            }
+         }
+
         .nav {
             /*border: 1px solid purple;*/
             position: fixed;             
@@ -92,9 +100,6 @@
         /*border: 2px solid pink;*/
         align-items: flex-start;
         padding-top: 0;
-        // & > div {
-        //     border: 1px solid black;
-        // }
     }
     
     .hero-section-txt {
@@ -121,6 +126,8 @@
                 max-width: 100%;
             }
     }
+
+    
    
     // .hero-section-txt {
         
@@ -197,6 +204,12 @@
             width: 100%;            
         }
     }
+
+    .glide__bullets {        
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 @include media-sm {    
@@ -223,12 +236,15 @@
     .hero-section {
         display: flex;
         flex-direction: column;
-        align-items: center;        
+        align-items: center;
+              
         
         & > div {
             //border: 1px solid purple;
             width: 100%;
         }
+
+        
     }
 
     .hero-section-img {
@@ -236,27 +252,29 @@
     }
 
     .hero-section-txt {
-        
+        // border: 1px solid green;
+        text-align: center;
+
         h2 {
             line-height: 1.25;
             font-size: 2.5rem;
-            text-align: center;
+            text-align: center;            
         }   
         
         p {
-            /*border: 1px solid red;*/
+            // border: 1px solid red;
             width: 90%;
             margin: 1rem auto;
             padding: 0.5rem 0;
             text-align: left;                    
-            line-height: 1.8;
+            line-height: 1.8;            
         }
 
-        .cta-btn {
+        .cta-btn {            
+            
             margin-top: 1.5rem;
             text-align: center;
-            margin: 0 auto;
-            
+            // margin: 0 auto;
         }
     }
 
