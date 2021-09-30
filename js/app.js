@@ -37,14 +37,24 @@ window.addEventListener('resize', () => {
 // Configuring Glide JS - Carousel Slider
 const config = {
     type: 'carousel',
-    perView: 3,
-    gap: 20, 
+    perView: 1,    
+    gap: 40,
+    peek: 400,   
+
      
     breakpoints: {
+
+        1230: {
+            perView: 2,
+            peek: 0
+
+        },
         
         980: {
           perView: 1,
-          activeNav: 'glide__bullet--active'
+          peek: 0,
+          activeNav: 'glide__bullet--active',          
+          focusAt: 'center'
         },
         
       }

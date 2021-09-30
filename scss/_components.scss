@@ -1,4 +1,4 @@
-header, main, footer {
+header {
     width: 80%;
     margin: 0 auto;   
    
@@ -28,9 +28,27 @@ h3 {
 .manage-logo {    
     width: 10rem;
 
-    img {        
+    object {        
         max-width: 100%;
     }
+}
+
+nav { 
+    
+    ul {
+        list-style: none;
+        
+        li {
+            display: inline-block;
+            padding: 0 1rem;          
+
+            a {
+                text-decoration: none;
+                
+            }
+        }
+    }
+    
 }
 
 .cta-btn {
@@ -52,9 +70,3 @@ h3 {
     }
 }
 
-/*footer {
-    border: 1px solid yellow;
-}*/
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }

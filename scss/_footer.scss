@@ -1,0 +1,113 @@
+footer {
+    width: 100%;
+    height: auto;
+    background: $very-dark-blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.1rem;
+    font-size: 0.9rem;
+    color: $very-light-gray;
+
+
+    .inner-content {
+        // border: 1px solid white;
+        margin: 3.5rem auto;
+        width: 80%;
+        height: 90%;
+        display: grid;        
+        // gap: 5px;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:    "manage-logo nav-footer search-box"
+                                "social-icons nav-footer copy-area";
+        justify-items: start;
+        // align-content: space-between;
+        justify-content: space-between;
+
+        & > div, & > nav {
+            // border: 1px solid yellow;
+            width: 100%;
+        }
+    }
+
+    .manage-logo {
+        grid-area: manage-logo;
+    }
+}
+
+
+
+.social-icons {
+    grid-area: social-icons;
+    display: flex;
+    align-items: flex-end;
+    ul {
+        list-style: none;
+
+        li {
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+.nav-footer {
+    grid-area: nav-footer;
+    display: flex;
+    align-items: flex-start;    
+}
+
+.menu-nav-footer {
+    width: 50%;
+    li {
+        display: block;
+
+        a {
+            color: $very-light-gray;
+        }
+    }
+}
+
+.submit-area {
+    grid-area: search-box;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid white;   
+}
+
+.email {
+    height: 2.8rem;
+    width: 73%;
+    border-radius: 3rem;
+    padding: 0 1rem;
+    border: none;
+}
+
+.submit-btn {
+    height: 2.8rem;
+    width: 25%;
+    font-family: 'Be Vietnam', sans-serif;
+    font-weight: 700;
+    background: $bright-red;
+    color: $very-light-gray;
+    border: none;
+    border-radius: 2rem;
+}
+
+.copy-area {
+    grid-area: copy-area;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center;
+    color: $very-light-gray 
+}
+
+.attribution a { 
+    color: $dark-grayish-blue;
+    text-decoration: none; 
+}
