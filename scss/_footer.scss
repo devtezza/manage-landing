@@ -12,18 +12,18 @@ footer {
 
     .inner-content {
         // border: 1px solid white;
+        display: grid;
         margin: 3.5rem auto;
-        width: 80%;
-        height: 90%;
-        display: grid;        
-        // gap: 5px;
+        width: 80%;                    
+        
         grid-template-columns: 1fr 2fr 1fr;
+        // grid-template-columns: auto;
         grid-template-rows: repeat(2, 1fr);
-        grid-template-areas:    "manage-logo nav-footer search-box"
+        grid-template-areas:    "manage-logo nav-footer submit-area"
                                 "social-icons nav-footer copy-area";
         justify-items: start;
         // align-content: space-between;
-        justify-content: space-between;
+        // justify-content: space-between;
 
         & > div, & > nav {
             // border: 1px solid yellow;
@@ -59,24 +59,31 @@ footer {
 }
 
 .menu-nav-footer {
+    // border: 1px solid white;
     width: 50%;
+    padding: 0;
+
     li {
         display: block;
 
-        a {
+        a { 
             color: $very-light-gray;
+
+            img {
+                border: 1px solid white;
+            }
         }
     }
 }
 
 .submit-area {
-    grid-area: search-box;
+    grid-area: submit-area;
     padding: 0;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid white;   
+    // border: 1px solid white;   
 }
 
 .email {
@@ -100,6 +107,11 @@ footer {
 
 .copy-area {
     grid-area: copy-area;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 0.8rem;
+    color: $dark-grayish-blue    
 }
 
 .attribution { 

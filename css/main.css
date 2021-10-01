@@ -334,7 +334,7 @@ p {
 }
 
 .simplify {
-  height: 13.5rem;
+  min-height: 13.5rem;
   background: #f25f3a;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -393,20 +393,16 @@ footer {
 }
 
 footer .inner-content {
-  margin: 3.5rem auto;
-  width: 80%;
-  height: 90%;
   display: -ms-grid;
   display: grid;
+  margin: 3.5rem auto;
+  width: 80%;
   -ms-grid-columns: 1fr 2fr 1fr;
       grid-template-columns: 1fr 2fr 1fr;
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
-      grid-template-areas: "manage-logo nav-footer search-box" "social-icons nav-footer copy-area";
+      grid-template-areas: "manage-logo nav-footer submit-area" "social-icons nav-footer copy-area";
   justify-items: start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 footer .inner-content > div, footer .inner-content > nav {
@@ -455,6 +451,7 @@ footer .manage-logo {
 
 .menu-nav-footer {
   width: 50%;
+  padding: 0;
 }
 
 .menu-nav-footer li {
@@ -465,10 +462,14 @@ footer .manage-logo {
   color: #fafafa;
 }
 
+.menu-nav-footer li a img {
+  border: 1px solid white;
+}
+
 .submit-area {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
-  grid-area: search-box;
+  grid-area: submit-area;
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -480,7 +481,6 @@ footer .manage-logo {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid white;
 }
 
 .email {
@@ -506,6 +506,17 @@ footer .manage-logo {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: copy-area;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 0.8rem;
+  color: #9095a7;
 }
 
 .attribution {
@@ -520,7 +531,7 @@ footer .manage-logo {
 }
 
 @media screen and (max-width: 1240px) {
-  header, footer {
+  header {
     width: 90%;
   }
   .header-container {
@@ -636,7 +647,11 @@ footer .manage-logo {
     text-align: center;
   }
   .features {
+    margin-top: 5rem;
     display: block;
+  }
+  .features h3 {
+    text-align: center;
   }
   .features > div {
     width: 80%;
@@ -645,6 +660,9 @@ footer .manage-logo {
   }
   .features .features-list {
     margin-top: 2rem;
+  }
+  .features .question {
+    margin-bottom: 4rem;
   }
   .features .title-wrapper {
     position: relative;
@@ -671,12 +689,70 @@ footer .manage-logo {
   }
   .testimonials {
     width: 90%;
-    margin: 0 auto;
+    margin: 7rem auto 0 auto;
+  }
+  .testimonials .cta-btn {
+    margin: 6rem auto 8rem auto;
   }
   .glide__bullets {
     display: block;
     visibility: visible;
     opacity: 1;
+  }
+  .simplify .inner-content {
+    display: block;
+  }
+  .simplify h3 {
+    margin: 3rem auto;
+    text-align: center;
+  }
+  .simplify .cta-btn {
+    margin: 3rem auto;
+    text-align: center;
+  }
+  .simplify .cta-btn a {
+    background: #fafafa;
+    color: #f25f3a;
+  }
+  footer .inner-content {
+    display: -ms-grid;
+    display: grid;
+    height: auto;
+    -ms-grid-rows: (1fr)[2] (0.5fr)[2];
+        grid-template-rows: repeat(2, 1fr) repeat(2, 0.5fr);
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+        grid-template-areas: "submit-area submit-area"  "nav-footer nav-footer"  "manage-logo social-icons" "copy-area copy-area";
+  }
+  footer .manage-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .nav-footer {
+    border: 1px solid gold;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .social-icons {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .copy-area {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 

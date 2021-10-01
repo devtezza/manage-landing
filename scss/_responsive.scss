@@ -1,5 +1,5 @@
 @include media-lg{
-    header, footer {
+    header {
         width: 90%;
         
     }
@@ -136,8 +136,13 @@
     }
 
     .features {
+        margin-top: 5rem;
         display: block;
         //border: 2px dashed blue;
+
+        h3 {
+            text-align: center;
+        }
 
         & > div {
             width: 80%;
@@ -145,10 +150,12 @@
             /*border: 1px solid black;        */
         }
 
-        
-
         .features-list {
             margin-top: 2rem;
+        }
+
+        .question {
+            margin-bottom: 4rem;
         }
 
         .title-wrapper {
@@ -182,13 +189,82 @@
 
     .testimonials {
         width: 90%;
-        margin: 0 auto;        
+        margin: 7rem auto 0 auto;
+        
+        .cta-btn {
+            margin: 6rem auto 8rem auto;
+            
+        }
     }
 
     .glide__bullets {        
         display: block;
         visibility: visible;
         opacity: 1;
+    }
+
+    .simplify {
+
+        .inner-content{
+            display: block;
+        }
+
+        h3 {            
+            margin: 3rem auto;
+            text-align: center;        
+        }
+    
+        .cta-btn {
+            
+            margin: 3rem auto; 
+            text-align: center;
+    
+            a {            
+                background: $very-light-gray;
+                color: $bright-red;
+            }        
+        }    
+    }
+
+    footer {
+        .inner-content {
+            display: grid;
+            height: auto;            
+            grid-template-rows: repeat(2, 1fr) repeat(2, 0.5fr);
+            grid-template-columns: auto;
+            grid-template-areas: "submit-area submit-area" 
+                                "nav-footer nav-footer" 
+                                "manage-logo social-icons"
+                                "copy-area copy-area";
+            // border: 1px solid gold;
+           
+            // & > div, & > nav {
+            //     border: 1px solid pink;
+            // }
+        }
+
+        .manage-logo {
+            display: flex;
+            align-items: flex-end
+        }
+    }
+
+    .nav-footer {
+        border: 1px solid gold;
+        justify-content: center;
+    }
+
+    .social-icons {        
+        align-items: flex-end;
+        justify-content: flex-end;
+        // img {
+        //     max-width: 75%;
+        // }
+    }
+
+    .copy-area {
+        align-items: flex-end;
+        justify-content: flex-start;
     }
 }
 
