@@ -41,7 +41,6 @@ h3 {
   background: url("../images/bg-tablet-pattern.svg") no-repeat;
   /*background-position: 128% -11rem;    */
   background-position: calc(100% + 170px) calc(100% - 80px);
-  background-size: 58%;
 }
 
 .manage-logo {
@@ -81,6 +80,10 @@ nav ul li a {
   background: #f25f3a;
   -webkit-box-shadow: 0px 5px 10px 0.5px rgba(242, 95, 58, 0.5);
           box-shadow: 0px 5px 10px 0.5px rgba(242, 95, 58, 0.5);
+}
+
+.cta-btn:hover a {
+  background: rgba(242, 95, 58, 0.7);
 }
 
 header {
@@ -147,6 +150,10 @@ header p {
   font-size: 0.8rem;
 }
 
+.top-bar .nav a:hover {
+  color: #9095a7;
+}
+
 .top-bar .cta-btn {
   visibility: visible;
 }
@@ -175,6 +182,7 @@ header p {
 }
 
 main {
+  position: relative;
   width: 100%;
 }
 
@@ -182,7 +190,20 @@ main section {
   margin-top: 7rem;
 }
 
+h4 {
+  color: #242d52;
+}
+
+p {
+  color: #9095a7;
+  line-height: 1.6;
+  width: 80%;
+  text-align: center;
+  margin: 1rem auto;
+}
+
 .features {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,7 +213,6 @@ main section {
 
 .features > div {
   width: 50%;
-  /*border: 1px solid black;        */
 }
 
 .features p {
@@ -201,6 +221,8 @@ main section {
 }
 
 .features .question p {
+  text-align: left;
+  margin-left: 0;
   margin-top: 2rem;
   width: 60%;
 }
@@ -240,8 +262,21 @@ main section {
 
 .features ol p {
   margin-left: 6.3rem;
+  text-align: left;
   margin-top: 1rem;
-  width: 75%;
+  width: 78%;
+}
+
+main:after {
+  position: absolute;
+  left: 0;
+  top: 18%;
+  content: '';
+  height: 600px;
+  width: 25vw;
+  background: url("../images/bg-tablet-pattern.svg") no-repeat;
+  background-position: top right;
+  z-index: -1;
 }
 
 .testimonials {
@@ -295,18 +330,6 @@ main section {
   background-image: url("../images/avatar-shanai.png");
 }
 
-h4 {
-  color: #242d52;
-}
-
-p {
-  color: #9095a7;
-  line-height: 1.6;
-  width: 80%;
-  text-align: center;
-  margin: 1rem auto;
-}
-
 .glide__bullets {
   bottom: -2em;
   display: none;
@@ -335,13 +358,14 @@ p {
 
 .simplify {
   min-height: 13.5rem;
-  background: #f25f3a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #f25f3a url("../images/bg-simplify-section-desktop.svg") no-repeat;
+  background-position: calc(100% + 250px) calc(100%);
 }
 
 .simplify .inner-content {
@@ -371,6 +395,10 @@ p {
 .simplify .cta-btn a {
   background: #fafafa;
   color: #f25f3a;
+}
+
+.simplify .cta-btn:hover a {
+  color: rgba(242, 95, 58, 0.5);
 }
 
 footer {
@@ -434,6 +462,13 @@ footer .manage-logo {
 .social-icons ul li {
   display: inline-block;
   margin-right: 0.5rem;
+  -webkit-filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(56deg) brightness(107%) contrast(100%);
+          filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(56deg) brightness(107%) contrast(100%);
+}
+
+.social-icons ul li:hover {
+  -webkit-filter: invert(43%) sepia(97%) saturate(2332%) hue-rotate(341deg) brightness(105%) contrast(90%);
+          filter: invert(43%) sepia(97%) saturate(2332%) hue-rotate(341deg) brightness(105%) contrast(90%);
 }
 
 .nav-footer {
@@ -462,8 +497,8 @@ footer .manage-logo {
   color: #fafafa;
 }
 
-.menu-nav-footer li a img {
-  border: 1px solid white;
+.menu-nav-footer li a:hover {
+  color: #f25f3a;
 }
 
 .submit-area {
@@ -500,6 +535,11 @@ footer .manage-logo {
   color: #fafafa;
   border: none;
   border-radius: 2rem;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  background: #da6e52;
 }
 
 .copy-area {
@@ -542,17 +582,13 @@ footer .manage-logo {
 
 @media screen and (max-width: 1120px) {
   .header-container {
-    background-position: right -250px top -150px;
+    background-position: calc(100% + 200px) calc(100% - 90px);
     background-size: 68%;
     /*background-attachment: scroll;*/
   }
 }
 
 @media screen and (max-width: 968px) {
-  /*.header-container {               
-        background-position: right -380px top -250px;
-        background-size: max(100%);        
-    }*/
   .top-bar .menu-btn {
     display: block;
     opacity: 1;
@@ -635,16 +671,9 @@ footer .manage-logo {
   }
   .hero-section-img {
     text-align: center;
-    /*border: 1px solid black;*/
   }
   .hero-section-img img {
-    /*border: 1px solid red;*/
     max-width: 100%;
-  }
-  .question p {
-    margin: 1rem auto 0 auto;
-    width: 60%;
-    text-align: center;
   }
   .features {
     margin-top: 5rem;
@@ -656,13 +685,18 @@ footer .manage-logo {
   .features > div {
     width: 80%;
     margin: 0 auto;
-    /*border: 1px solid black;        */
+  }
+  .features .question {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .features .question p {
+    margin: 1rem auto 0 auto;
+    width: 60%;
+    text-align: center;
   }
   .features .features-list {
     margin-top: 2rem;
-  }
-  .features .question {
-    margin-bottom: 4rem;
   }
   .features .title-wrapper {
     position: relative;
@@ -692,7 +726,10 @@ footer .manage-logo {
     margin: 7rem auto 0 auto;
   }
   .testimonials .cta-btn {
-    margin: 6rem auto 8rem auto;
+    margin: 6rem auto;
+  }
+  .card {
+    height: 15rem;
   }
   .glide__bullets {
     display: block;
@@ -824,7 +861,7 @@ footer .manage-logo {
   }
   .header-container {
     background-position: right -150px top -100px;
-    background-size: 120%;
+    background-size: 125%;
   }
   .top-bar {
     padding: 1rem 0;
@@ -859,8 +896,8 @@ footer .manage-logo {
   }
   .hero-section-txt p {
     width: 90%;
-    margin: 1rem auto;
-    padding: 0.5rem 0;
+    margin: 0.5rem auto 2rem auto;
+    padding: 0;
     text-align: left;
     line-height: 1.8;
   }
@@ -876,6 +913,7 @@ footer .manage-logo {
     margin: auto;
     padding: 0;
     width: 90%;
+    line-height: 1.4;
     font-size: 2rem;
     font-weight: 800;
     text-align: center;
@@ -886,9 +924,12 @@ footer .manage-logo {
   .features p {
     line-height: 2;
   }
+  .features .question {
+    margin: 6rem 0 3rem 0;
+  }
   .features .question p {
     width: 80%;
-    margin: 2rem auto 3rem auto;
+    margin: 1.5rem auto 0 auto;
     text-align: center;
   }
   .features ol p {
@@ -899,6 +940,37 @@ footer .manage-logo {
   h4 {
     font-weight: 800;
     font-size: 1rem;
+  }
+  .testimonials {
+    margin-top: 4rem;
+  }
+  .testimonials h3 {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  .testimonials p {
+    font-size: 0.9rem;
+  }
+  .testimonials .cta-btn {
+    margin: 5rem auto 3rem auto;
+  }
+  .simplify {
+    margin-top: 3rem;
+  }
+  .simplify .inner-content {
+    width: 90%;
+  }
+  .simplify h3 {
+    margin-top: 6rem;
+    width: 100%;
+    text-align: center;
+  }
+  .simplify .cta-btn {
+    margin-bottom: 5.5rem;
+  }
+  footer .inner-content {
+    width: 95%;
+    margin-top: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

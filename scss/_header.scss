@@ -55,6 +55,10 @@ header {
             color: $dark-blue;
             font-weight: 700;
             font-size: 0.8rem;
+
+            &:hover {
+                color: $dark-grayish-blue
+            }
         }
         
     }

@@ -29,7 +29,7 @@ function resizeScreen() {
 }
 
 window.addEventListener('resize', () => {
-   if (this.innerWidth > 768) {
+   if (this.innerWidth > 968) {
       resizeScreen()
    }
 })
