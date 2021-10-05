@@ -20,10 +20,10 @@
 }
 
 @include media-md {
-    $horizontal: 193600px/max-width;
-    $vertical: 87120px/max-width;
-    @debug $horizontal;
-    @debug $vertical;
+    // $horizontal: 193600px/max-width;
+    // $vertical: 87120px/max-width;
+    // @debug $horizontal;
+    // @debug $vertical;
     // .header-container {               
     //     background-position: calc(100% + $horizontal * 1px) calc(100% - $vertical * 1px);
     //     background-size: max(100%);        
@@ -108,6 +108,7 @@
     }
     
     .hero-section-txt {
+        border: 1px solid purple;
 
         h2 {
             font-size: 1.8rem;
@@ -131,7 +132,14 @@
                 max-width: 100%;
             }
     }
-    
+
+    main:after {        
+        left: -100%;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+
     .features {
         margin-top: 5rem;
         display: block;
@@ -400,6 +408,25 @@
             text-align: center;
             // margin: 0 auto;
         }
+    }
+
+    // main {
+    //     overflow-x: hidden;
+    // }
+
+    main:before {
+        content: '';
+        border: 2px solid green;
+        position: absolute;
+        right: 0;    
+        top: -20%;            
+        height: 300px;
+        width: 100vw;
+        background: url('../images/bg-tablet-pattern.svg') no-repeat;
+        background-position: bottom right;
+        background-size: max(90%);
+        // overflow: hidden;
+        z-index: -1;
     }
 
    .features {
