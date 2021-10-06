@@ -11,7 +11,7 @@
     }   
 }
 
-@include media-lg-to-md {
+@include media-lg2 {
     .header-container {               
         background-position: calc(100% + 200px) calc(100% - 90px);
         background-size: max(68%);
@@ -53,7 +53,7 @@
         .nav {
             /*border: 1px solid purple;*/
             position: fixed;             
-            top: 6rem;
+            top: 6.5rem;
             left: -50%;
             z-index: 999;
             display: none;
@@ -62,10 +62,12 @@
 
             &.active {
                 display: block;
-                left: 10%;
+                width: 85%;
+                left: 42.5%;
+                transform: translateX(-42.5%);
                 overflow-y: hidden;
                 //right: 5%;
-                width: 80%;
+                
                 height: 18rem;                
                 visibility: visible;
                 opacity: 1;
@@ -108,7 +110,7 @@
     }
     
     .hero-section-txt {
-        border: 1px solid purple;
+        // border: 1px solid purple;
 
         h2 {
             font-size: 1.8rem;
@@ -294,7 +296,29 @@
     }
 }
 
-@include media-md-to-sm {
+@include media-md2 {
+    .header-container {               
+        background-position: calc(100% + 220px) calc(100% - 150px);
+        background-size: 75%;
+        /*background-attachment: scroll;*/
+    }
+}
+
+@include media-md3 {
+    .header-container {               
+        background-position: calc(100% + 100px) calc(100% - 250px);
+        background-size: 65%;
+        /*background-attachment: scroll;*/
+    }
+}
+
+@include media-md4 {
+    .header-container {               
+        background-position: calc(100% + 170px) calc(100% - 350px);
+        background-size: 75%;
+        /*background-attachment: scroll;*/
+    }
+
     footer {
         .inner-content {
             display: grid;                     
@@ -416,15 +440,15 @@
 
     main:before {
         content: '';
-        border: 2px solid green;
+        // border: 2px solid green;
         position: absolute;
         right: 0;    
-        top: -20%;            
+        top: -14%;            
         height: 300px;
         width: 100vw;
         background: url('../images/bg-tablet-pattern.svg') no-repeat;
-        background-position: bottom right;
-        background-size: max(90%);
+        background-position: calc(100% + 180px) calc(100% - 35px);
+        background-size: max(85%);
         // overflow: hidden;
         z-index: -1;
     }

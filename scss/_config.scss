@@ -9,7 +9,7 @@
 body {
     border: 1px solid red;
     max-width: 1440px;
-    min-width: 250px;
+    min-width: 300px;
     margin: 0 auto;        
     padding: 0;
     font-family: 'Be Vietnam', sans-serif;
@@ -24,8 +24,20 @@ body {
     }
 }
 
-@mixin media-md-to-sm {
+@mixin media-md4 {
     @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin media-md3 {
+    @media screen and (max-width: 570px) {
+        @content;
+    }
+}
+
+@mixin media-md2 {
+    @media screen and (max-width: 700px) {
         @content;
     }
 }
@@ -36,7 +48,7 @@ body {
     }
 }
 
-@mixin media-lg-to-md {
+@mixin media-lg2 {
     @media screen and (max-width: 1120px) {
         @content;
     }

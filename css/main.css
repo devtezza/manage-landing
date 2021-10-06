@@ -9,7 +9,7 @@
 body {
   border: 1px solid red;
   max-width: 1440px;
-  min-width: 250px;
+  min-width: 300px;
   margin: 0 auto;
   padding: 0;
   font-family: 'Be Vietnam', sans-serif;
@@ -138,8 +138,8 @@ header p {
   z-index: 999;
   opacity: 0;
   visibility: hidden;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.3)));
-  background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.3));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.02)), to(rgba(0, 0, 0, 0.4)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.4));
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
@@ -268,7 +268,6 @@ p {
 }
 
 main:after {
-  border: 2px solid gold;
   position: absolute;
   left: 0;
   top: 18%;
@@ -607,7 +606,7 @@ footer .manage-logo {
   .top-bar .nav {
     /*border: 1px solid purple;*/
     position: fixed;
-    top: 6rem;
+    top: 6.5rem;
     left: -50%;
     z-index: 999;
     display: none;
@@ -616,9 +615,11 @@ footer .manage-logo {
   }
   .top-bar .nav.active {
     display: block;
-    left: 10%;
+    width: 85%;
+    left: 42.5%;
+    -webkit-transform: translateX(-42.5%);
+            transform: translateX(-42.5%);
     overflow-y: hidden;
-    width: 80%;
     height: 18rem;
     visibility: visible;
     opacity: 1;
@@ -660,9 +661,6 @@ footer .manage-logo {
         -ms-flex-align: start;
             align-items: flex-start;
     padding-top: 0;
-  }
-  .hero-section-txt {
-    border: 1px solid purple;
   }
   .hero-section-txt h2 {
     font-size: 1.8rem;
@@ -808,7 +806,28 @@ footer .manage-logo {
   }
 }
 
+@media screen and (max-width: 700px) {
+  .header-container {
+    background-position: calc(100% + 220px) calc(100% - 150px);
+    background-size: 75%;
+    /*background-attachment: scroll;*/
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .header-container {
+    background-position: calc(100% + 100px) calc(100% - 250px);
+    background-size: 65%;
+    /*background-attachment: scroll;*/
+  }
+}
+
 @media screen and (max-width: 500px) {
+  .header-container {
+    background-position: calc(100% + 170px) calc(100% - 350px);
+    background-size: 75%;
+    /*background-attachment: scroll;*/
+  }
   footer .inner-content {
     display: -ms-grid;
     display: grid;
@@ -917,15 +936,14 @@ footer .manage-logo {
   }
   main:before {
     content: '';
-    border: 2px solid green;
     position: absolute;
     right: 0;
-    top: -20%;
+    top: -14%;
     height: 300px;
     width: 100vw;
     background: url("../images/bg-tablet-pattern.svg") no-repeat;
-    background-position: bottom right;
-    background-size: 90%;
+    background-position: calc(100% + 180px) calc(100% - 35px);
+    background-size: 85%;
     z-index: -1;
   }
   .features {
