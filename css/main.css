@@ -510,12 +510,37 @@ footer .manage-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.submit-area form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border: 1px solid white;
+}
+
+.submit-area .message {
+  width: 100%;
+  font-size: 0.7rem;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .email {
@@ -1012,6 +1037,13 @@ footer .manage-logo {
   footer .inner-content {
     width: 95%;
     margin-top: 0;
+  }
+  footer .submit-area form {
+    width: 95%;
+    margin: 0 auto;
+  }
+  footer .social-icons ul {
+    width: 85%;
   }
 }
 /*# sourceMappingURL=main.css.map */

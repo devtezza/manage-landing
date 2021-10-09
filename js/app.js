@@ -63,3 +63,24 @@ const config = {
 
 // Creating Carousel Slider
 new Glide('.glide', config).mount()
+
+
+// Validating email form
+const form = document.querySelector('.newsletter')
+const message = document.querySelector('.message')
+let pristine = new Pristine(form)
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    let valid = pristine.validate()
+
+    if(!valid) {
+        message.textContent = 'Please insert a valid email'
+    } else {
+        message.textContent = ''
+    }
+    
+    //alert('Form is valid: ' + valid)
+})
+
+
