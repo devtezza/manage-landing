@@ -9,7 +9,7 @@
 body {
   border: 1px solid red;
   max-width: 1440px;
-  min-width: 300px;
+  min-width: 310px;
   margin: 0 auto;
   padding: 0;
   font-family: 'Be Vietnam', sans-serif;
@@ -533,14 +533,13 @@ footer .manage-logo {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid white;
 }
 
 .submit-area .message {
-  width: 100%;
+  width: 90%;
   font-size: 0.7rem;
   font-style: italic;
-  font-weight: 400;
+  color: #f25f3a;
 }
 
 .email {
@@ -631,7 +630,7 @@ footer .manage-logo {
   .top-bar .nav {
     /*border: 1px solid purple;*/
     position: fixed;
-    top: 6.5rem;
+    top: 10rem;
     left: -50%;
     z-index: 999;
     display: none;
@@ -640,12 +639,12 @@ footer .manage-logo {
   }
   .top-bar .nav.active {
     display: block;
-    width: 85%;
-    left: 42.5%;
-    -webkit-transform: translateX(-42.5%);
-            transform: translateX(-42.5%);
+    width: 90%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     overflow-y: hidden;
-    height: 18rem;
+    height: 70%;
     visibility: visible;
     opacity: 1;
     background: #fafafa;
@@ -667,7 +666,7 @@ footer .manage-logo {
             align-items: center;
     padding: 0;
     width: 100%;
-    height: 18rem;
+    height: 100%;
   }
   .top-bar .nav .menu-nav li {
     /*border: 1px dashed black;*/
@@ -759,6 +758,7 @@ footer .manage-logo {
     margin: 7rem auto 0 auto;
   }
   .testimonials .cta-btn {
+    border: 1px solid blue;
     margin: 6rem auto;
   }
   .card {
@@ -920,6 +920,17 @@ footer .manage-logo {
   .top-bar {
     padding: 1rem 0;
   }
+  .top-bar .nav {
+    top: 6.5rem;
+    left: -50%;
+  }
+  .top-bar .nav.active {
+    width: 85%;
+    left: 42.5%;
+    -webkit-transform: translateX(-42.5%);
+            transform: translateX(-42.5%);
+    height: 18rem;
+  }
   .hero-section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -958,6 +969,11 @@ footer .manage-logo {
   .hero-section-txt .cta-btn {
     margin-top: 1.5rem;
     text-align: center;
+  }
+  main .cta-btn {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
   }
   main:before {
     content: '';
