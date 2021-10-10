@@ -55,6 +55,7 @@ header {
             color: $dark-blue;
             font-weight: 700;
             font-size: 0.8rem;
+            transition: all .4s ease;
 
             &:hover {
                 color: $dark-grayish-blue

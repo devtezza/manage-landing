@@ -80,6 +80,8 @@ nav ul li a {
   background: #f25f3a;
   -webkit-box-shadow: 0px 5px 10px 0.5px rgba(242, 95, 58, 0.5);
           box-shadow: 0px 5px 10px 0.5px rgba(242, 95, 58, 0.5);
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
 }
 
 .cta-btn:hover a {
@@ -148,6 +150,8 @@ header p {
   color: #242d52;
   font-weight: 700;
   font-size: 0.8rem;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 .top-bar .nav a:hover {
@@ -469,6 +473,7 @@ footer .manage-logo {
 .social-icons ul li:hover {
   -webkit-filter: invert(43%) sepia(97%) saturate(2332%) hue-rotate(341deg) brightness(105%) contrast(90%);
           filter: invert(43%) sepia(97%) saturate(2332%) hue-rotate(341deg) brightness(105%) contrast(90%);
+  opacity: 0.9;
 }
 
 .nav-footer {
@@ -495,10 +500,13 @@ footer .manage-logo {
 
 .menu-nav-footer li a {
   color: #fafafa;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
 }
 
 .menu-nav-footer li a:hover {
   color: #f25f3a;
+  opacity: 0.99;
 }
 
 .submit-area {
@@ -559,6 +567,8 @@ footer .manage-logo {
   color: #fafafa;
   border: none;
   border-radius: 2rem;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .submit-btn:hover {
@@ -592,6 +602,12 @@ footer .manage-logo {
 .attribution a {
   color: #9095a7;
   text-decoration: none;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+.attribution a:hover {
+  color: rgba(242, 95, 58, 0.5);
 }
 
 @media screen and (max-width: 1240px) {

@@ -9,14 +9,11 @@ menuBtn.addEventListener('click', toggleMenu)
 menuOverlay.addEventListener('click', toggleMenu)
 
 // Toggle Menu Function
-function toggleMenu() {
-    console.log(menuOverlay)
+function toggleMenu() {    
     navBar.classList.toggle('active')
-    menuBtn.classList.toggle('active')
-    //console.log(navBar.classList)
+    menuBtn.classList.toggle('active')    
     menuOverlay.classList.toggle('active')
-    document.body.classList.toggle('scrolling')
-    
+    document.body.classList.toggle('scrolling')    
 }
 
 // Fixed Resize Screen Function
@@ -68,7 +65,12 @@ new Glide('.glide', config).mount()
 // Validating email form
 const form = document.querySelector('.newsletter')
 const message = document.querySelector('.message')
+const email = document.querySelector('.email')
 let pristine = new Pristine(form)
+
+email.addEventListener('focus', (e) => {
+    email.style.color = '#000'
+})
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -76,11 +78,12 @@ form.addEventListener('submit', (e) => {
 
     if(!valid) {
         message.textContent = 'Please insert a valid email'
+        email.style.color = '#f25f3a'
     } else {
         message.textContent = ''
-    }
+        email.style.color = '#000'
+    }   
     
-    //alert('Form is valid: ' + valid)
 })
 
 
