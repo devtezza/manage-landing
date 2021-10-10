@@ -20,21 +20,14 @@
 }
 
 @include media-md {
-    // $horizontal: 193600px/max-width;
-    // $vertical: 87120px/max-width;
-    // @debug $horizontal;
-    // @debug $vertical;
-    // .header-container {               
-    //     background-position: calc(100% + $horizontal * 1px) calc(100% - $vertical * 1px);
-    //     background-size: max(100%);        
-    // }
-
+    
     .top-bar {
         
         .menu-btn {
             display: block;
             opacity: 1;
             visibility: visible;
+            // transition: all 2s ease;
 
             &.active {
                 background: url('../images/icon-close.svg') no-repeat center;
@@ -43,36 +36,34 @@
         }
 
         .overlay {
-            &.active {
-               display: block;
+            &.active {            
                opacity: 1;
                visibility: visible;
+               transition: all .35s ease;
             }
          }
 
         .nav {
-            /*border: 1px solid purple;*/
+            // border: 1px solid purple;
             position: fixed;             
             top: 10rem;
             left: -50%;
-            z-index: 999;
-            display: none;
+            z-index: 999;            
             visibility: hidden;
             opacity: 0;            
+            transition: opacity .4s ease-in-out;
 
-            &.active {
-                display: block;
+            &.active {                
                 width: 90%;
                 left: 50%;
                 transform: translateX(-50%);
-                overflow-y: hidden;
-                //right: 5%;
-                
+                overflow-y: hidden;    
                 height: 70%;                
                 visibility: visible;
                 opacity: 1;
                 background: $very-light-gray;
                 border-radius: 5px;
+                
             }
 
             .menu-nav{
@@ -83,6 +74,7 @@
                 padding: 0;
                 width: 100%;
                 height: 100%;
+                // transition: opacity 2s ease;
 
                 li {
                    
@@ -393,18 +385,14 @@
             left: -50%;
 
             &.active {
-                // display: block;
+                
                 width: 85%;
                 left: 42.5%;
                 transform: translateX(-42.5%);
-                // overflow-y: hidden;
-                //right: 5%;
+                
                 
                 height: 18rem;                
-                // visibility: visible;
-                // opacity: 1;
-                // background: $very-light-gray;
-                // border-radius: 5px;
+                
             }
         }
     }
