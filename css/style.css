@@ -7,7 +7,6 @@
 }
 
 body {
-  border: 1px solid red;
   max-width: 1440px;
   min-width: 310px;
   margin: 0 auto;
@@ -18,13 +17,7 @@ body {
 
 /*PRIMARY COLORS*/
 /*NEUTRAL COLORS*/
-header {
-  width: 80%;
-  margin: 0 auto;
-}
-
 h2, h3, h4 {
-  /*font-size: 3.5rem;*/
   color: #242d52;
 }
 
@@ -39,7 +32,6 @@ h3 {
 .header-container {
   width: 100%;
   background: url("../images/bg-tablet-pattern.svg") no-repeat;
-  /*background-position: 128% -11rem;    */
   background-position: calc(100% + 170px) calc(100% - 80px);
 }
 
@@ -88,6 +80,11 @@ nav ul li a {
   background: rgba(242, 95, 58, 0.7);
 }
 
+header {
+  width: 80%;
+  margin: 0 auto;
+}
+
 header p {
   padding: 2.5rem 0;
   color: #9095a7;
@@ -96,8 +93,6 @@ header p {
 }
 
 .top-bar {
-  /*border: 1px solid green;*/
-  /*height: 10rem;*/
   padding: 2.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,13 +103,9 @@ header p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  /*.manage-logo {
-        border: 1px solid black;
-    }*/
 }
 
 .top-bar .menu-btn {
-  /*border: 1px solid red;*/
   width: 2rem;
   height: 1.5rem;
   background: url("../images/icon-hamburger.svg") no-repeat center;
@@ -350,7 +341,6 @@ main:after {
 }
 
 .glide__bullet:hover, .glide__bullet:focus, .glide__bullet--active {
-  /* border: 2px solid white; */
   background-color: #f25f3a;
 }
 
@@ -622,7 +612,9 @@ footer .manage-logo {
   .header-container {
     background-position: calc(100% + 200px) calc(100% - 90px);
     background-size: 68%;
-    /*background-attachment: scroll;*/
+  }
+  .features {
+    margin-top: 4rem;
   }
 }
 
@@ -683,7 +675,6 @@ footer .manage-logo {
     height: 100%;
   }
   .top-bar .nav .menu-nav li {
-    /*border: 1px dashed black;*/
     padding: 0;
   }
   .top-bar .nav .menu-nav li a {
@@ -694,7 +685,6 @@ footer .manage-logo {
     visibility: hidden;
   }
   .hero-section {
-    /*border: 2px solid pink;*/
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -849,7 +839,6 @@ footer .manage-logo {
   .header-container {
     background-position: calc(100% + 220px) calc(100% - 150px);
     background-size: 75%;
-    /*background-attachment: scroll;*/
   }
 }
 
@@ -857,7 +846,6 @@ footer .manage-logo {
   .header-container {
     background-position: calc(100% + 100px) calc(100% - 250px);
     background-size: 65%;
-    /*background-attachment: scroll;*/
   }
 }
 
@@ -865,7 +853,6 @@ footer .manage-logo {
   .header-container {
     background-position: calc(100% + 170px) calc(100% - 350px);
     background-size: 75%;
-    /*background-attachment: scroll;*/
   }
   footer .inner-content {
     display: -ms-grid;
@@ -1076,4 +1063,4 @@ footer .manage-logo {
     width: 85%;
   }
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=style.css.map */

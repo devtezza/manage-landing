@@ -10,23 +10,18 @@ footer {
     color: $very-light-gray;
 
 
-    .inner-content {
-        // border: 1px solid white;
+    .inner-content {        
         display: grid;
         margin: 3.5rem auto;
         width: 80%;                    
         
-        grid-template-columns: 1fr 2fr 1fr;
-        // grid-template-columns: auto;
+        grid-template-columns: 1fr 2fr 1fr;        
         grid-template-rows: repeat(2, 1fr);
         grid-template-areas:    "manage-logo nav-footer submit-area"
                                 "social-icons nav-footer copy-area";
-        justify-items: start;
-        // align-content: space-between;
-        // justify-content: space-between;
+        justify-items: start;        
 
-        & > div, & > nav {
-            // border: 1px solid yellow;
+        & > div, & > nav {            
             width: 100%;
         }
     }
@@ -66,8 +61,7 @@ footer {
     align-items: flex-start;    
 }
 
-.menu-nav-footer {
-    // border: 1px solid white;
+.menu-nav-footer {    
     width: 50%;
     padding: 0;
 
@@ -93,19 +87,16 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    // border: 1px solid gold;    
+    justify-content: center;  
     
     form {
         display: flex;
         width: 100%;
         align-items: center;
         justify-content: space-between;
-        // border: 1px solid white;
     }
     
     .message {
-        // border: 1px solid pink;
         width: 90%;
         font-size: 0.7rem;
         font-style: italic;

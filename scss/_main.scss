@@ -6,14 +6,11 @@ main {
     }
 }
 
-h4 {
-    
-    // border: 1px solid goldenrod;            
+h4 {         
     color: $dark-blue;
 }
 
-p {
-    // border: 1px solid goldenrod;
+p {   
     color: $dark-grayish-blue;       
     line-height: 1.6;
     width: 80%;
@@ -21,17 +18,14 @@ p {
     margin: 1rem auto;      
 }
 
-.features {
-    // border: 1px solid pink;
+.features {    
     position: relative;
     display: flex;
     width: 80%;
-    margin: 0 auto;
-    // background: url('../images/bg-tablet-pattern.svg') no-repeat;
+    margin: 0 auto;    
 
     & > div {
-        width: 50%;
-        // border: 1px solid green;
+        width: 50%;        
     }    
 
     p {
@@ -39,8 +33,7 @@ p {
         color: $dark-grayish-blue;
     }   
 
-    .question {
-        // border: 1px dashed black;
+    .question {        
         p {
             text-align: left;
             margin-left: 0;
@@ -54,22 +47,18 @@ p {
     .title-wrapper {
         display: flex;
         align-items: center;
-        width: 100%;
-        //border: 1px solid black;
+        width: 100%;       
     }
 
-    h4 {
-        //border: 1px solid green;
-        display: inline-block;
-        //width: 50%;        
+    h4 {        
+        display: inline-block;               
     }
 
     ol {
         list-style: none;
 
         li {
-            &:not(:first-of-type) {
-                //border: 1px solid green;
+            &:not(:first-of-type) {               
                 margin-top: 2rem;
             }
         }        
@@ -95,7 +84,6 @@ p {
 }
 
 main:after {
-    // border: 2px solid gold;
     position: absolute;
     left: 0;    
     top: 18%;    
@@ -183,8 +171,7 @@ main:after {
     border: none; 
 }
 
-.glide__bullet:hover, .glide__bullet:focus, .glide__bullet--active {
-    /* border: 2px solid white; */
+.glide__bullet:hover, .glide__bullet:focus, .glide__bullet--active {    
     background-color: hsl(12, 88%, 59%);    
 } 
 
@@ -196,13 +183,11 @@ main:after {
 }
 
 .simplify {
-    min-height: 13.5rem;
-    // background: $bright-red;
+    min-height: 13.5rem;    
     display: flex;
     align-items: center;
     background: $bright-red url('../images/bg-simplify-section-desktop.svg') no-repeat;
-    background-position: calc(100% + 250px) calc(100%);
-    // background-size: max(100%);
+    background-position: calc(100% + 250px) calc(100%);    
     
     .inner-content {
         width: 80%;
@@ -228,8 +213,7 @@ main:after {
         
         &:hover {
            
-            a {
-                // background: hsla(0, 0%, 98%, 0.95);
+            a {                
                 color: $red-shadow;
             }
         }

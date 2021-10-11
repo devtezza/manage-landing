@@ -1,15 +1,9 @@
-header {
-    width: 80%;
-    margin: 0 auto;   
-}
-
-h2, h3, h4 {
-    /*font-size: 3.5rem;*/
+h2, h3, h4 {    
     color: $dark-blue;
 }
 
 h2 {
-    font-size: 3.5rem;
+    font-size: 3.5rem;    
 }
 
 h3 {
@@ -18,10 +12,8 @@ h3 {
 
 .header-container {
     width: 100%; 
-    background: url('../images/bg-tablet-pattern.svg') no-repeat;
-    /*background-position: 128% -11rem;    */
-    background-position: calc(100% + 170px) calc(100% - 80px);    
-    // background-size: max(58%);    
+    background: url('../images/bg-tablet-pattern.svg') no-repeat;    
+    background-position: calc(100% + 170px) calc(100% - 80px); 
 }
 
 .manage-logo {    
@@ -70,8 +62,7 @@ nav {
     }
 
     &:hover {
-        a {
-            // transition: all .35s ease-in-out;
+        a {            
             background: hsla(12, 88%, 59%, 0.7);            
         }
     }
