@@ -119,13 +119,13 @@ main:after {
 
 @function get-img-bg ($card) {
     @if $card == 1 {
-        @return '../images/avatar-anisha.png';
+        @return '../../images/avatar-anisha.png';
     } @else if $card == 2 {
-        @return '../images/avatar-ali.png';
+        @return '../../images/avatar-ali.png';
     } @else if $card == 3 {
-        @return '../images/avatar-richard.png';
+        @return '../../images/avatar-richard.png';
     } @else {
-        @return '../images/avatar-shanai.png';
+        @return '../../images/avatar-shanai.png';
     }
     
 }
