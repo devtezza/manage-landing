@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/manage-landing-page-using-css-flexbox-css-grid-sass-glidejs-wdCWoBnSc]
-- Live Site URL: [(https://nandotezza.github.io/manage-landing/]
+- [Solution URL](https://www.frontendmentor.io/solutions/manage-landing-page-using-css-flexbox-css-grid-sass-glidejs-wdCWoBnSc)
+- [Live Site URL](https://devtezza.github.io/manage-landing/)
 
 ## My process
 
@@ -50,7 +50,7 @@ Users should be able to:
 
 ## Author
 
-- Fernando Tezza - [@nandotezza](https://www.frontendmentor.io/profile/nandotezza)
+- Fernando Tezza - [@devtezza](https://www.frontendmentor.io/profile/devtezza)
 
 ## Acknowledgments
 
