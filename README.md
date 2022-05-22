@@ -50,7 +50,7 @@ Users should be able to:
 
 ## Author
 
-- Fernando Tezza - [@devtezza](https://www.frontendmentor.io/profile/devtezza)
+- Website - [Fernando Tezza](https://www.devtezza.com/)
 
 ## Acknowledgments
 
